@@ -1,0 +1,112 @@
+body
+{
+  margin: 0;
+  padding: 0;
+  font-family: "Times New Roman";
+}
+.container
+{
+  position: relative;
+  width: 1200px;
+  height: 300px;
+  margin: 120px auto;
+  /*background: linear-gradient(to right, #003366 0%, #66ccff 100%);*/
+
+}
+.container .box
+{
+  position: relative;
+  width: 300px;
+  height: 350px;
+  background: linear-gradient(to right, #003366 0%, #66ccff 100%);
+  float: left;
+  margin: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: 0.5s;
+}
+.container .box:hover
+{
+  transform: scale(1.3);
+  box-shadow: 0 25px 40px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.container .box .imgbx
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.container .box .imgbx:before
+{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height:100%;
+  z-index:1;
+  background: linear-gradient(180deg,#036,#6cf);
+  mix-blend-mode: multiply;
+  opacity: 0;
+  transition: 0.5s;
+}
+.container .box:hover .imgbx:before
+{
+  opacity: 2;
+}
+.container .box .imgbx .img
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.container .box .content
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  padding: 10px;
+  align-items: flex-end;
+}
+.container .box .content h2
+{
+  color: white;
+  transition: 0.5s;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  padding: 5px;
+  font-size: 25px;
+  transform: translateY(150px);
+
+}
+.container .box:hover .content h2
+{
+  transform: translateY(0);
+  transition-delay: 0.6s;
+
+}
+.container .box:hover .content p
+{
+  color: white;
+  transform: translateY(150px);
+  transition: 0.5s;
+  font-size: 15px;
+  padding: 5px;
+  margin-bottom: 5px;
+
+}
+.container .box:hover .content p{
+  transform: translateY(0);
+  transition-delay: 0.7s;
+}
